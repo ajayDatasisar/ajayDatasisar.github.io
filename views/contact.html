@@ -1,0 +1,85 @@
+<div class="jumbotro">
+  <div class="main-content">
+    <h2 class="jumbo-text">Where to find us</h2>
+    <h2 class="jumbo-subtext">Techhub,</h2>
+    <p class="jumbo-points">Prestige Bluechip Park</p>
+    <p class="jumbo-points">Dairy Colony, Adugodi</p>
+    <p class="jumbo-points">Bengaluru, Karnataka</p>
+    <p class="jumbo-points">560029, India</p>
+  </div>
+  <!-- hero shot -->
+  <div class="query-form" >
+    <table class="table table-responsive">
+      <tbody>
+        <tr><td class="jumbo-subtext form-entry"><b><h3>Please fill the form</h3></b></td></tr>
+        <tr><td class="jumbo-subtext form-entry">Name</td></tr>
+        <tr><td><input placeholder="Name" class="form-control-c" /></td></tr>
+        <tr><td class="jumbo-subtext form-entry">Your email address</td></tr>
+        <tr><td><input placeholder="eg : jon@doe.com" class="form-control-c"/></td></tr>
+        <tr><td class="jumbo-subtext form-entry">Phone No</td></tr>
+        <tr><td><input placeholder="your phone number" class="form-control-c"/></td></tr>
+        <tr><td class="jumbo-subtext form-entry">Country</td></tr>
+        <tr><td><input placeholder="Country" class="jumbo-subtext form-control-c" /></td></tr>
+        <tr><td class="jumbo-subtext form-entry">Let us know how we can help you</td></tr>
+        <tr><td><textarea rows="4" placeholder="write your quires" class="form-control-c"></textarea></td></tr>
+        <tr><td>
+                <form action="?" method="POST">
+                <div class="g-recaptcha" data-callback='callbk' data-sitekey="6Lcn_RsTAAAAAPwZgwshcNgR_6nJfeBZnLhmPhqZ"></div>
+                <br/>
+                </form>
+        </td></tr>
+        <tr><td class="form-entry"><a id="phone-menu-btn" style="line-height:25px !important" class="btn nav-menu" ng-href="#/">Submit</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+        async defer>
+    </script>
+
+<script type="text/javascript">
+  function callbk(){
+    $('tbody tr:last-child').css({'display':'initial'})
+  }
+
+  var onloadCallback = function() {
+    alert("grecaptcha is ready!");
+  };
+
+</script>
+<style type="text/css">
+
+tbody{
+  padding:5px;
+}
+tbody tr:last-child{
+  display: none;
+}
+.jumbo-points{
+  line-height: 1
+}
+.main-content{
+  width : 40% !important;
+}
+.jumbo-text{
+  font-size: 50px !important;
+}
+.g-recaptcha{
+  width:100%;
+}
+td{
+  border:none !important;
+  font-size: 17px !important;
+}
+@media (max-width: 900px) {
+  .main-content{
+    width : 100% !important;
+  }
+  .jumbo-text{
+    width: 100% !important;
+  }
+  .query-form{
+    width: 100% !important;
+  }
+}
+</style>
