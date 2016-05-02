@@ -1,0 +1,439 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel='stylesheet' href='css/bootstrap.min.css' />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- <link rel="stylesheet" href="styles/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'> -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <!-- endbuild -->
+    
+  </head>
+  <body ng-app="vibrantWebsiteApp">
+
+    <!-- controller for header/events/uilements of feature page  -->
+    <!-- connects to other controller through service -->
+    <div ng-controller="feature-details" class="grow" id="grow-block" >
+      <div class="blowup-remove">
+        <i id="idd" class="blowup-remove-icon glyphicon glyphicon-remove"></i>
+        <div class="pn-holder">
+          <i  data-navigate="prev"  class="prevnext mobile-next glyphicon glyphicon-chevron-left"></i>
+          <i  data-navigate="next"  class="prevnext mobile-prev glyphicon glyphicon-chevron-right"></i>
+        </div>
+      </div>
+      <i  data-navigate="next" style="display:none" class="prevnext desktop-next glyphicon glyphicon-chevron-right"></i>
+      <i  data-navigate="prev" style="display:none" class="prevnext desktop-prev glyphicon glyphicon-chevron-left"></i>
+    </div>
+    <span id="overlay"></span>
+    <!-- Navigation animation -->
+      
+      <div class="navigation">
+        <div class="navigation-content">
+          <ul class="list-group">
+            <li style="cursor:pointer" class="list-group-item"><i style="float:right" class="glyphicon glyphicon-remove"></i></li>
+            <!-- <li class="list-group-item"><b style="font-size:2em">Vibrant</b></li> -->
+            <a class="anchor" href="index.html"><li class="list-group-item">Home</li></a>
+            <a class="anchor" href="about_us.html"><li class="list-group-item">About Us</li></a>
+            <a class="anchor" href="plans.html"><li class="list-group-item">Plans</li></a>            
+            <a class="anchor" href="https://medium.com/simplify-your-team-work" target="_blank"><li class="list-group-item">Blog</li></a>
+            <a class="anchor" href="contact_us.html"><li class="list-group-item">Contact Us</li></a>
+            <li>
+              <center>
+                <i class="row"><img class="nav-logo" src="images/appicon.png"></i>
+                <a href="#/"><img class="deeplink-nav" src="images/android_playstore.png"></a>
+                <a href="#/"><img class="deeplink-nav" src="images/ios_appstore.png"></a>
+                <div style="margin-top:15px" class="social-widgets">
+                  <i class="s-media fa fa-medium"></i>
+                  <i class="s-media fa fa-linkedin"></i>
+                  <i class="s-media fa fa-facebook"></i>
+                  <i class="s-media fa fa-twitter"></i>
+                </div>
+              </center>
+            </li>
+          </ul>
+        </div>
+      </div>  
+      <div id="zoom">
+      <!-- / Navigation animation -->
+    
+      <!--[if lte IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+      <!-- Add your site or application content here -->
+      <div class="header">
+        <div class="navbar navbar-default" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="index.html"><img style="height:325%" src="images/vibrant_logo.png"></a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="js-navbar-collapse">
+
+              <ul style="position: relative;right: 3%;" class="nav navbar-nav">
+                <!-- <li class="active"><a href="#/">Home</a></li> -->
+                <!-- <li><a class="nav-link-light" ng-href="#/contact">Contact</a></li> -->
+                <!-- <li><a class="nav-link-light" ng-href="#/">Team</a></li> -->
+                <!-- <li><a class="nav-link-dark" ng-href="#/">Blog</a></li> -->
+                <li style="position: relative; bottom: 10px;" class="nav-menu-cont"><a class="nav-menu" >Menu</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container" style="margin-bottom:60px !important">
+        
+        <center style="margin:20px auto 0px auto"><a id="phone-menu-btn" style="line-height:25px !important;display:none;margin:0 auto;" class="btn nav-menu" ng-href="#/">Menu</a></center>
+
+        <!-- <div ng-view=""></div> -->
+        <!-- ===================================================MAIN PAGE ============================================== -->
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <center><h3 style="font-size:30px;background-color: white;padding: 10px 8px;margin : 30px 0px 15px 0px;color: grey;line-height: 2;">Vibrant Work App Plans & Pricing</h3></center>
+        <h4 style="background-color: white;padding: 10px 8px;font-size:19px;color: grey;line-height: 2;">We have plans designed for all types of teams. All our plans come with world class support and you can upgrade any time. Irrespective the size of your team you can choose the plan that’s most suitable for your organization. All plans come with a trial. We will also be updating each plan with more features suiting different set of customers needs.</h4>
+      <div id="pricing_desktop" class="pricing-table pricing-green">
+        <div class="col-lg-3 col-md-3 col-xs-6">
+          <ul class="plan plan1">
+            <li class="plan-name">
+              Entrepreneur Pack
+            </li>
+            <span class="p-tagline">Ensure smart collaboration and achieve faster growth in your business</span>
+            <li class="plan-price">
+              <h3 style="padding:0 !important"> $20 <span class="price-cents">.00</span><span class="price-month">/month</span></h3>
+              
+            </li>
+            <li>
+              <!-- <strong>5GB</strong> --> Special Promotional Edition
+            </li>
+            <li>
+              <!-- <strong>1GB</strong> --> Upto 4 users
+            </li>
+            <li>
+              <!-- <strong>400GB</strong> --> Tasks
+            </li>
+            <li>
+              <!-- <strong>10</strong> --> Performance
+            </li>
+            <li>
+              <!-- <strong>Forum</strong> --> Chat
+            </li>
+            <li>VIRA</li>
+            <li>Limited Storage</li>
+            <li class="plan-action">
+              <a href="#/plans" class="btn btn-red btn-lg">
+                Trial
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-3 col-xs-6">
+          <ul class="plan plan2">
+            <li class="plan-name">
+              Total Productivity
+            </li>
+            <span class="p-tagline">Sync external users and manage priority projects efficiently</span>
+            <li class="plan-price">
+              <h3 style="padding:0 !important"> $50 <span class="price-cents">.00</span><span class="price-month">/month</span></h3>
+              
+            </li>
+            <li>
+              <!-- <strong>5GB</strong> --> Upto 10 users
+            </li>
+            <li>
+              <!-- <strong>1GB</strong> --> Everything in Entrepreneur Pack
+            </li>
+            <li>
+              <!-- <strong>400GB</strong> --> Projects
+            </li>
+            <li>
+              <!-- <strong>10</strong> --> Digest
+            </li>
+            <li>
+              <!-- <strong>Forum</strong> --> External Users
+            </li>
+            <li>Additional Storage</li>
+            <li class="plan-action">
+              <a href="#/plans" class="btn btn-red btn-lg">
+                Contact us
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-3 col-xs-6">
+          <ul class="plan plan3">
+            <li class="plan-name">
+              Productivity Plus
+            </li>
+            <div class="p-tagline">Increse employee engagement and track real time performance</div>
+            <li class="plan-price">
+              <h3 style="padding:0 !important"> $70 <span class="price-cents">.00</span><span class="price-month">/month</span></h3>
+              
+            </li>
+            <li>
+              <!-- <strong>50GB</strong> --> Upto 10 users
+            </li>
+            <li>
+              <!-- <strong>8GB</strong> --> Everything in Total Pack
+            </li>
+            <li>
+              <!-- <strong>1024GB</strong> --> Productivity
+            </li>
+            <li>
+              <!-- <strong>Unlimited</strong> --> OKRs
+            </li>
+            <li>
+              <!-- <strong>Forum</strong> --> Rewards
+            </li>
+            <li>External Users</li>
+            <li>Maximum Storage</li>
+            <li class="plan-action">
+              <a href="#/plans" class="btn btn-red btn-lg">
+                Contact us
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-3 col-xs-6">
+          <ul class="plan plan4">
+            <li class="plan-name">
+              Customised Pack
+            </li>
+            <span class="p-tagline">A customised productivity solution for large teams + all your business needs</span>
+            <li class="plan-price">
+              <h3 style="padding:0 !important"> Contact us</h3>
+              
+            </li>
+            <li>
+              <!-- <strong>50GB</strong> --> Customised 
+            </li>
+            <li>
+              <!-- <strong>8GB</strong> --> External Users
+            </li>
+            <li>
+              <!-- <strong>1024GB</strong> --> Unlimited Storage
+            </li>
+            <!-- <li>
+              <strong>Unlimited</strong> Email Address
+            </li>
+            <li>
+              <strong>Forum</strong> Support
+            </li >-->
+            <li class="plan-action">
+              <a href="#/plans" class="btn btn-red btn-lg">
+                Contact us
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+  </div>
+
+</div>
+
+      <!--  -->
+      <div style="width:100%" id="pricing_phone" class="pricing-table pricing-green">
+        <!-- <div id="pricing_phone"> -->
+          <div style="background-color:#8D63AB" class="">
+            <ul style="margin:0px !important;background-color:#8D63AB" class="plan plan2">
+              <li style="background-color:#8D63AB" class="plan-name">
+                Entrepreneur Pack
+              </li>
+              <li style="background-color:#8D63AB" class="plan-price">
+                <h3 style="padding:0 !important"> $20 <span class="price-cents">.00</span><span class="price-month">/month</span></h3>
+                
+              </li>
+                <span class="price_dd">
+                  <li style="background-color:#8D63AB" class="plan-name">
+                    <a href="#/plans" style="color:#8D63AB" class="btn btn-wht btn-md">
+                    Trial
+                    </a>
+                  </li>
+                  <span style="background-color:#8D63AB" class="p-tagline">Ensure smart collaboration and achieve faster growth in your business</span>
+                  <li style="font-size:14px;background-color:#8D63AB" class="plan-name">
+                    Special Promotional Edition | Upto 4 users | Tasks | Performance | Chat | VIRA |Limited Storage
+                  </li>
+                </span>
+            </ul>
+        </div>
+
+        <!-- plan2 -->
+        <div  style="background-color:#F7941D">
+            <ul style="background-color:#F7941D;margin:0px !important" class="plan plan2">
+              <li style="background-color:#F7941D" class="plan-name">
+                Total Productivity
+              </li>
+              <li style="background-color:#F7941D" class="plan-price">
+                <h3 style="padding:0 !important"> $50 <span class="price-cents">.00</span><span class="price-month">/month</span></h3>
+                
+              </li>
+                <span class="price_dd">
+                  <li style="background-color:#F7941D" class="plan-name">
+                    <a href="#/plans" style="color:#F7941D" class="btn btn-wht btn-md">
+                    Contact us
+                    </a>
+                  </li>
+                  <span style="background-color:#F7941D" class="p-tagline">Sync external users and manage priority projects efficiently</span>
+                  <li style="font-size:14px;background-color:#F7941D" class="plan-name">
+                    Upto 10 users | Everything in Entrepreneur Pack | Projects | Digest | External Users | Additional Storage
+                  </li>
+                </span>
+            </ul>
+        </div>
+
+        <!-- plan3 -->
+        <div  style="background-color:#E6048C">
+            <ul style="background-color:#E6048C;margin:0px !important" class="plan plan2">
+              <li style="background-color:#E6048C" class="plan-name">
+                Productivity Plus
+              </li>
+              <li style="background-color:#E6048C" class="plan-price">
+                <h3 style="padding:0 !important"> $70 <span class="price-cents">.00</span><span class="price-month">/month</span></h3>
+                
+              </li>
+                <span class="price_dd">
+                  <li style="background-color:#E6048C" class="plan-name">
+                    <a href="#/plans" style="color:#E6048C" class="btn btn-wht btn-md">
+                    Contact us
+                    </a>
+                  </li>
+                  <span style="background-color:#E6048C" class="p-tagline">Increse employee engagement and track real time performance</span>
+                  <li style="background-color:#E6048C;font-size:14px" class="plan-name">
+                    Upto 10 users | Everything in Total Pack | Productivity | OKRs | Rewards | External Users |Maximum Storage
+                  </li>
+                </span>
+            </ul>
+        </div>
+
+        <!-- plan4 -->
+        <div  style="background-color:#6858FF">
+            <ul style="background-color:#6858FF;margin:0px !important" class="plan plan2">
+              <li style="background-color:#6858FF" class="plan-name">
+                Customised Pack
+              </li>
+              <!-- <li style="background-color:#6858FF" class="plan-price">
+                <h3 style="padding:0 !important"> $50 <span class="price-cents">.00</span><span class="price-month">/month</span></h3>
+                
+              </li> -->
+                <span class="price_dd">
+                  <li style="background-color:#6858FF" class="plan-name">
+                    <a href="#/plans" style="color:#6858FF" class="btn btn-wht btn-md">
+                    Contact us
+                    </a>
+                  </li>
+                  <span style="background-color:#6858FF" class="p-tagline">A customised productivity solution for large teams + all your business needs</span>
+                  <li style="background-color:#6858FF;font-size:14px" class="plan-name">
+                    Customised | External Users | Unlimited Storage             
+                  </li>
+                </span>
+            </ul>
+        </div>
+
+      </div>
+      <h5 style="background-color: white;padding: 10px 8px;list-style-type: none;color: grey;line-height: 2;">For any questions or support you may need on the plans, please write to sales@vibrantworkapp.com</h5>
+
+
+
+        <!-- =================================================== / MAIN PAGE =========================================== -->
+
+      </div>
+
+      <div class="footer">
+
+              <div class="footer-link-cont" style="text-align:center;display:inline-block;width:49%;float:left;position:relative;top:7px">
+                  <a href="index.html" class="footer-link">Home</a>
+                  <a href="about_us.html" class="footer-link">About Vibrant</a>
+                  <a href="privacy.html" class="footer-link">Privacy & Terms</a>
+              </div>
+              <div style="display:inline-block;width:49%">
+                <a href="https://www.linkedin.com/company/vibrant-work-app" target="_blank"><img  class="linkedin deeplink-appicon" src="images/sm_linkedin_normal.png"></a>
+                <a href="https://www.facebook.com/vibrantworkapp" target="_blank"><img class="facebook deeplink-appicon" src="images/sm_facebook_normal.png"></a>
+                <a href="https://medium.com/simplify-your-team-work" target="_blank"><img class="medium deeplink-appicon" src="images/sm_medium_normal.png"></a>
+                <a href="https://twitter.com/vibrantworkapp" target="_blank"><img class="medium deeplink-appicon" src="images/sm_twitter_normal.png"></a>
+              </div>
+<!--         <div class="deeplink">
+          <div style="padding:5px 0px 15px 0px" class="container">
+            <center>
+              <div class="footer-note">Comming soon on</div>
+              <a href="#/"><img class="deeplink-playstore" src="images/android_playstore.png"></a>
+              <a href="#/"><img class="deeplink-appstore" src="images/ios_appstore.png"></a>
+            </center>
+          </div> -->
+        </div>
+        <div class="external-links">
+
+        </div>
+      </div>
+
+  </div>
+
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js 
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/about.js"></script>
+        <!-- endbuild -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"async defer></script>
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+
+
+       $(document).ready(function(){
+        $('.price_dd').hide();
+      });
+
+      $('.plan').on('click',function(){
+        $(this).find('.price_dd').slideToggle();
+      })
+
+      $('.btn-wht').on('click',function(e){
+        e.stopPropagation();
+      })
+    </script>
+
+
+</body>
+</html>

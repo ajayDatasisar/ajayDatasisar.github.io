@@ -1,0 +1,274 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel='stylesheet' href='css/bootstrap.min.css' />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- <link rel="stylesheet" href="styles/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'> -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <!-- endbuild -->
+    
+  </head>
+  <body ng-app="vibrantWebsiteApp">
+
+    <!-- controller for header/events/uilements of feature page  -->
+    <!-- connects to other controller through service -->
+    <div ng-controller="feature-details" class="grow" id="grow-block" >
+      <div class="blowup-remove">
+        <i id="idd" class="blowup-remove-icon glyphicon glyphicon-remove"></i>
+        <div class="pn-holder">
+          <i  data-navigate="prev"  class="prevnext mobile-next glyphicon glyphicon-chevron-left"></i>
+          <i  data-navigate="next"  class="prevnext mobile-prev glyphicon glyphicon-chevron-right"></i>
+        </div>
+      </div>
+      <i  data-navigate="next" style="display:none" class="prevnext desktop-next glyphicon glyphicon-chevron-right"></i>
+      <i  data-navigate="prev" style="display:none" class="prevnext desktop-prev glyphicon glyphicon-chevron-left"></i>
+    </div>
+    <span id="overlay"></span>
+    <!-- Navigation animation -->
+      
+      <div class="navigation">
+        <div class="navigation-content">
+          <ul class="list-group">
+            <li style="cursor:pointer" class="list-group-item"><i style="float:right" class="glyphicon glyphicon-remove"></i></li>
+            <!-- <li class="list-group-item"><b style="font-size:2em">Vibrant</b></li> -->
+            <a class="anchor" href="index.html"><li class="list-group-item">Home</li></a>
+            <a class="anchor" href="about_us.html"><li class="list-group-item">About Us</li></a>
+            <a class="anchor" href="plans.html"><li class="list-group-item">Plans</li></a>       
+            <a class="anchor" href="https://medium.com/simplify-your-team-work" target="_blank"><li class="list-group-item">Blog</li></a>
+            <a class="anchor" href="contact_us.html"><li class="list-group-item">Contact Us</li></a>
+            <li>
+              <center>
+                <i class="row"><img class="nav-logo" src="images/appicon.png"></i>
+                <a href="#/"><img class="deeplink-nav" src="images/android_playstore.png"></a>
+                <a href="#/"><img class="deeplink-nav" src="images/ios_appstore.png"></a>
+                <div style="margin-top:15px" class="social-widgets">
+                  <i class="s-media fa fa-medium"></i>
+                  <i class="s-media fa fa-linkedin"></i>
+                  <i class="s-media fa fa-facebook"></i>
+                  <i class="s-media fa fa-twitter"></i>
+                </div>
+              </center>
+            </li>
+          </ul>
+        </div>
+      </div>  
+      <div id="zoom">
+      <!-- / Navigation animation -->
+    
+      <!--[if lte IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+
+      <!-- Add your site or application content here -->
+      <div class="header">
+        <div class="navbar navbar-default" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="index.html"><img style="height:325%" src="images/vibrant_logo.png"></a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="js-navbar-collapse">
+
+              <ul style="position: relative;right: 3%;" class="nav navbar-nav">
+                <!-- <li class="active"><a href="#/">Home</a></li> -->
+                <!-- <li><a class="nav-link-light" ng-href="#/contact">Contact</a></li> -->
+                <!-- <li><a class="nav-link-light" ng-href="#/">Team</a></li> -->
+                <!-- <li><a class="nav-link-dark" ng-href="#/">Blog</a></li> -->
+                <li style="position: relative; bottom: 10px;" class="nav-menu-cont"><a class="nav-menu" >Menu</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container" style="margin-bottom:60px !important">
+        
+        <center style="margin:20px auto 0px auto"><a id="phone-menu-btn" style="line-height:25px !important;display:none;margin:0 auto;" class="btn nav-menu" ng-href="#/">Menu</a></center>
+
+        <!-- <div ng-view=""></div> -->
+        <!-- ===================================================MAIN PAGE ============================================== -->
+        <div class="jumbotro">
+          <div class="main-content">
+            <h2 class="jumbo-text">Where to find us</h2>
+            <h2 class="jumbo-subtext">Techhub,</h2>
+            <p class="jumbo-points">Prestige Bluechip Park</p>
+            <p class="jumbo-points">Dairy Colony, Adugodi</p>
+            <p class="jumbo-points">Bengaluru, Karnataka</p>
+            <p class="jumbo-points">560029, India</p>
+          </div>
+          <!-- hero shot -->
+          <div class="query-form" >
+            <table class="table table-responsive">
+              <tbody>
+                <tr><td class="jumbo-subtext form-entry"><b><h3>Please fill the form</h3></b></td></tr>
+                <tr><td class="jumbo-subtext form-entry">Name</td></tr>
+                <tr><td><input placeholder="Name" id="name" class="form-control-c" /></td></tr>
+                <tr><td class="jumbo-subtext form-entry">Your email address</td></tr>
+                <tr><td><input placeholder="eg : jon@doe.com" id="email" class="form-control-c"/></td></tr>
+                <tr><td class="jumbo-subtext form-entry">Phone No</td></tr>
+                <tr><td><input placeholder="your phone number" id="phno" class="form-control-c"/></td></tr>
+                <tr><td class="jumbo-subtext form-entry">Country</td></tr>
+                <tr><td><input placeholder="Country" id="country" class="jumbo-subtext form-control-c" /></td></tr>
+                <tr><td class="jumbo-subtext form-entry">Let us know how we can help you</td></tr>
+                <tr><td><textarea rows="4" id="query" placeholder="write your quires" class="form-control-c"></textarea></td></tr>
+                <tr><td>
+                        <form action="?" method="POST">
+                        <div class="g-recaptcha" data-callback='callbk' data-sitekey="6Lcn_RsTAAAAAPwZgwshcNgR_6nJfeBZnLhmPhqZ"></div>
+                        <br/>
+                        </form>
+                </td></tr>
+                <tr><td class="form-entry"><a id="contact_us_form" style="line-height:25px !important" class="btn nav-menu" ng-href="#/">Submit</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+
+        <!-- =================================================== / MAIN PAGE =========================================== -->
+
+      </div>
+
+      <div class="footer">
+
+              <div class="footer-link-cont" style="text-align:center;display:inline-block;width:49%;float:left;position:relative;top:7px">
+                  <a href="index.html" class="footer-link">Home</a>
+                  <a href="about_us.html" class="footer-link">About Vibrant</a>
+                  <a href="privacy.html" class="footer-link">Privacy & Terms</a>
+              </div>
+              <div style="display:inline-block;width:49%">
+                <a href="https://www.linkedin.com/company/vibrant-work-app" target="_blank"><img  class="linkedin deeplink-appicon" src="images/sm_linkedin_normal.png"></a>
+                <a href="https://www.facebook.com/vibrantworkapp" target="_blank"><img class="facebook deeplink-appicon" src="images/sm_facebook_normal.png"></a>
+                <a href="https://medium.com/simplify-your-team-work" target="_blank"><img class="medium deeplink-appicon" src="images/sm_medium_normal.png"></a>
+                <a href="https://twitter.com/vibrantworkapp" target="_blank"><img class="medium deeplink-appicon" src="images/sm_twitter_normal.png"></a>
+              </div>
+<!--         <div class="deeplink">
+          <div style="padding:5px 0px 15px 0px" class="container">
+            <center>
+              <div class="footer-note">Comming soon on</div>
+              <a href="#/"><img class="deeplink-playstore" src="images/android_playstore.png"></a>
+              <a href="#/"><img class="deeplink-appstore" src="images/ios_appstore.png"></a>
+            </center>
+          </div> -->
+        </div>
+        <div class="external-links">
+
+        </div>
+      </div>
+
+  </div>
+
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js 
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/about.js"></script>
+        <!-- endbuild -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"async defer></script>
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+
+      function callbk(){
+        $('tbody tr:last-child').css({'display':'initial'})
+      }
+
+      var onloadCallback = function() {
+        alert("grecaptcha is ready!");
+      };
+
+
+          $('#contact_us_form').on('click',function(){
+            var name = $('#name').val();
+            var email = $('#email').val();
+            var mobno = $('#phno').val();
+            var country = $('#country').val();
+            var query = $('#query').val();
+            $.ajax({
+              type:"POST",
+              crossDomain: true,
+              contentType: "application/json" ,
+              url : "http://trial.vibrantworkapp.com/request_trial",
+              data : {"name":name ,"country":country, "email":email , "phone":phbno , "timestamp":new Date().getTime(),'query':query},
+              success : function(response){
+                console.log(response);
+              }
+            });
+          });
+
+
+    </script>
+    <style type="text/css">
+tbody{
+  padding:5px;
+}
+tbody tr:last-child{
+  display: none;
+}
+.jumbo-points{
+  line-height: 1
+}
+.main-content{
+  width : 40% !important;
+}
+.jumbo-text{
+  font-size: 50px !important;
+}
+.g-recaptcha{
+  width:100%;
+}
+td{
+  border:none !important;
+  font-size: 17px !important;
+}
+@media (max-width: 900px) {
+  .main-content{
+    width : 100% !important;
+  }
+  .jumbo-text{
+    width: 100% !important;
+  }
+  .query-form{
+    width: 100% !important;
+  }
+}</style>
+
+</body>
+</html>
