@@ -542,6 +542,9 @@ body {
   #pricing_phone{
     display: inline-block !important;
   }
+  .plans_header{
+    margin-top: 30px !important;
+  }
 }
 
 
