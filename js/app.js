@@ -7,6 +7,7 @@
           'header' : 'Task Management',
           'content' : 'Have secure and quick team communication with your entire team members either one to one or bring everybody in the same group.',
           'color': 'yellow',
+          'width':61,
           'fullContent' : {
             'title' : 'When you have team working across different verticals and on different projects, it becomes cumbersome to manage the work. It requires use of multiple applications or frequent email updates to sync with each other.',
             'point1' : 'Your teams might be spread across locations, each working on different projects. With this app, you can make sure that each team is well allocated with their projects with sub divided tasks',
@@ -57,6 +58,7 @@
           'img':'images/Vibrant_icons_alternate3.png',
           'det_img':'images/Filevault.png',
           'header' : 'File Storage',
+          'width' : 61,
           'content' : 'Keep your official documents officially safe and secure with encrypted version making sure the documents are private to roles and privileges within the organization.',
           'color':'yellow',
           'fullContent' : {
@@ -72,6 +74,7 @@
           'header' : 'Activity Updates',
           'content' : ' Assign, acknowledge, finish and report - all with single a work app. Activity updates to keep the flow of work going.',
           'color':'teal',
+          'width' : 61,
           'fullContent' : {
             'title' : 'Collaboration among team involves work dependencies where you dwell between acknowledging a task, finishing that task and reporting as a final step. All these 3 steps if managed in a single step can reduce a considerable time spent over collaboration. With Vibrant Work App, you can easily do the above three with activity updates. Assign a task and let the app tell you the progress of the task with instant activity updates', 
             'point1' : 'Get to know the pulse of the activity within your team through live activity feeds.',
@@ -152,7 +155,7 @@
         $('#org-name').css({'margin-bottom':'0px !important'} )
         $.each(fdata,function(idx,val){
           if(val.name != null){
-            $('#auto-complete-options').append('<li data-img="" class="list-group-item2"><img style="width:5%;margin:0px 10px" src="'+val.logo+'" />'+val.name+'</li>')
+            $('#auto-complete-options').append('<li data-val="'+val.name+'" class="list-group-item2"><img style="width:5%;margin:0px 10px" src="'+val.logo+'" />'+val.name+'</li>')
           }
         });
       }
@@ -163,13 +166,13 @@
     });
   }
 
-  $(document).on('click','.list-group-item2',function(){
-    $('#org-name').text( $(this).text() )
+  $(document).on('click','li.list-group-item2',function(){
+    $('#org-name').val( $(this).data('val') )
     logoUrl = $(this).find('img').attr('src')
     $('#auto-complete-options li').remove();
 
   });
-  $(document).on('blur','#org-name',function(){
+  $(document).on('focus','input',function(){
     $('#auto-complete-options li').remove();
   });
 
@@ -201,7 +204,8 @@
                 'header' : features[features_idx]['header'],
                 'content' : features[features_idx]['content'],
                 'fullContent' : features[features_idx]['fullContent']  ,
-                'det_img' : features[features_idx]['det_img']  
+                'det_img' : features[features_idx]['det_img'],
+                'width' : features[features_idx]['width']  
                };
                $('#grow-block').append( FeatureDetails(data) );
                // use services to share data
@@ -213,6 +217,10 @@
 
   function FeatureDetails(data){
   $('html').css({'overflow':'hidden'});
+  var width = 56;
+  if (data['width']) {
+    width = data["width"];
+  }
   var content = '<div id="contentId" class="container">'+
                   
                   '<div class="blowup-desktop-header" style="text-align:justify"><h2 style="padding:0 0 0 3%;color:#fff;display:inline-block;vertical-align:middle">'+data['header']+'</h2></div>'+
@@ -228,7 +236,7 @@
                   '</div>'+
 
                   '<div style="position:relative" class="blowup-c"><center>'+
-                  '<img style="width:56%"  src="'+data['det_img']+'">'+
+                  '<img style="width:'+width+'%"  src="'+data['det_img']+'">'+
                   '<img style="width:20%;position:absolute;top:-6%;left:14%" src="'+data['img']+'"/>'+
                   '</center></div>'+
 
@@ -273,7 +281,8 @@
                 'header' :  features[features_idx]['header'],
                 'content' :  features[features_idx]['content'],
                 'fullContent' :  features[features_idx]['fullContent'],
-                'det_img' : features[features_idx]['det_img']    
+                'det_img' : features[features_idx]['det_img'],    
+                'width' : features[features_idx]['width']
               };
               var cont = FeatureDetails(dataHTML);
               $('#contentId').remove();
