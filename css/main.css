@@ -956,3 +956,9 @@ body {
   vertical-align: middle;
   top : 7px;
 }
+#ilogo{
+  position: absolute;
+  top: 15px;
+  width: 35px;
+  right: 30px;
+}

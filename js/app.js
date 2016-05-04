@@ -168,12 +168,20 @@
 
   $(document).on('click','li.list-group-item2',function(){
     $('#org-name').val( $(this).data('val') )
+    if($(this).find('img').attr('src') != undefined){
+      console.log( 'HEy watchu lookin at ',$(this).find('img').attr('src') );
+      $('#org-name').parent().append('<img id="ilogo" src="'+$(this).find('img').attr('src')+'"/>');
+    }
     logoUrl = $(this).find('img').attr('src')
     $('#auto-complete-options li').remove();
 
   });
   $(document).on('focus','input',function(){
     $('#auto-complete-options li').remove();
+  });
+
+  $(document).on('keyup','#org-name',function(){
+    $('#org-name').parent().find('img').remove();
   });
 
   function update_features(){
