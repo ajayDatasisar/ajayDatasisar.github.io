@@ -168,7 +168,7 @@
 
   $(document).on('click','li.list-group-item2',function(){
     $('#org-name').val( $(this).data('val') )
-    if($(this).find('img').attr('src') != undefined){
+    if($(this).find('img').attr('src') != 'null'){
       console.log( 'HEy watchu lookin at ',$(this).find('img').attr('src') );
       $('#org-name').parent().append('<img id="ilogo" src="'+$(this).find('img').attr('src')+'"/>');
     }
