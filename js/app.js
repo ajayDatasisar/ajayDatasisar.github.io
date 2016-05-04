@@ -139,7 +139,7 @@
       crossDomain: true,
       contentType: "application/json" ,
       url : "http://trial.vibrantworkapp.com/request_trial",
-      data : {"name":fname+' '+lname ,"country":country, "email":email , "phone":mobno , "org_name":orgnm ,"timestamp":new Date().getTime()},
+      data : {"name":fname+' '+lname ,"country":country,'org_logo':logo, "email":email , "phone":mobno , "org_name":orgnm ,"timestamp":new Date().getTime()},
       success : function(response){
         console.log(response);
       }
