@@ -115,10 +115,15 @@
             <p class="jumbo-points">Dairy Colony, Adugodi</p>
             <p class="jumbo-points">Bengaluru, Karnataka</p>
             <p class="jumbo-points">560029, India</p>
+            <div id="googleMap" style="width:500px;height:280px;"></div>
           </div>
           <!-- hero shot -->
           <div class="query-form" >
-            <table class="table table-responsive">
+
+
+            <div id="zurmoExternalWebForm"><script type="text/javascript" src="https://api.vibrantworkapp.com/app/index.php/contacts/external/sourceFiles?id=1"></script></div>
+
+            <!-- <table class="table table-responsive">
               <tbody>
                 <tr><td class="jumbo-subtext form-entry"><b><h3>Please fill the form</h3></b></td></tr>
                 <tr><td class="jumbo-subtext form-entry">Name</td></tr>
@@ -139,7 +144,14 @@
                 </td></tr>
                 <tr><td class="form-entry"><a id="contact_us_form" style="line-height:25px !important" class="btn nav-menu" ng-href="#/">Submit</a></td></tr>
               </tbody>
-            </table>
+            </table> -->
+
+
+
+
+
+
+            <!--  -->
           </div>
         </div>
 
@@ -155,6 +167,8 @@
                   <a href="about_us.html" class="footer-link">About Vibrant</a>
                   <a href="privacy.html" class="footer-link">Privacy & Terms</a>
               </div>
+
+
               <div style="display:inline-block;width:49%">
                 <a href="https://www.linkedin.com/company/vibrant-work-app" target="_blank"><img  class="linkedin deeplink-appicon" src="images/sm_linkedin_normal.png"></a>
                 <a href="https://www.facebook.com/vibrantworkapp" target="_blank"><img class="facebook deeplink-appicon" src="images/sm_facebook_normal.png"></a>
@@ -194,7 +208,7 @@
         <script src="js/app.js"></script>
         <script src="https://www.google.com/recaptcha/api.js"></script>
         <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"async defer></script>
-
+        <script src="http://maps.googleapis.com/maps/api/js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -234,13 +248,31 @@
           });
 
 
+
+          function initialize() {
+            var mapProp = {
+              center:new google.maps.LatLng(12.937153, 77.60521),
+              zoom:15,
+              mapTypeId:google.maps.MapTypeId.ROADMAP
+            };
+              var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+              
+              marker = new google.maps.Marker({
+                  position: mapProp['center'],
+                  map: map
+              });
+            }
+
+          google.maps.event.addDomListener(window, 'load', initialize);
+
+
     </script>
     <style type="text/css">
 tbody{
   padding:5px;
 }
 tbody tr:last-child{
-  display: none;
+  /*display: none;*/
 }
 .jumbo-points{
   line-height: 1
@@ -268,7 +300,50 @@ td{
   .query-form{
     width: 100% !important;
   }
-}</style>
+}
+
+table{
+  background-color: #E5E5E5;
+  padding:30px;
+  width:100%;
+  border:none;
+}
+
+td{
+  padding:10px;
+}
+
+label{
+  padding : 0px 10px;
+  color : darkgrey;
+}
+
+input{
+  border:none;
+  padding:10px;
+  width:100%;
+  box-sizing : border-box;
+}
+.float-bar{
+  
+}
+
+.float-bar span:last-child{
+  font-size : 22px;
+  color : #fff !important;
+  background-color: #e84233 !important;
+  border-radius: 50px;
+  padding : 10px 25px;
+  line-height: 10px !important;
+  top: 17px;
+  float : right;
+}
+#zurmoExternalWebForm{
+  background-color: #E5E5E5;
+  width:100%;
+  padding : 10px;
+}
+</style>
 
 </body>
 </html>
