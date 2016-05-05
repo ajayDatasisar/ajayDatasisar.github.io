@@ -219,10 +219,6 @@
                 'width' : features[features_idx]['width']  
                };
                $('#grow-block').append( FeatureDetails(data) );
-               // use services to share data
-               // scope.shareService(data);
-               // set all data of features
-               // scope.setAllData(scope.features);
 
   });
 
