@@ -4,7 +4,7 @@
       {
           'img':'images/tasks.png',
           'det_img':'images/Tasks_ph.png',
-          'header' : 'Task Management',
+          'header' : 'Work Management',
           'content' : 'Have secure and quick team communication with your entire team members either one to one or bring everybody in the same group.',
           'color': 'yellow',
           'width':61,
@@ -134,16 +134,18 @@
     var orgnm = $('#org-name').val();
     var country = $('#country').val();
     var logo = logoUrl;
-    $.ajax({
-      type:"POST",
-      crossDomain: true,
-      contentType: "application/json" ,
-      url : "http://trial.vibrantworkapp.com/request_trial",
-      data : {"name":fname+' '+lname ,"country":country,'org_logo':logo, "email":email , "phone":mobno , "org_name":orgnm ,"timestamp":new Date().getTime()},
-      success : function(response){
-        console.log(response);
-      }
-    });
+    if( $('#terms_check').is(':checked') ){
+      $.ajax({
+        type:"POST",
+        crossDomain: true,
+        contentType: "application/json" ,
+        url : "http://trial.vibrantworkapp.com/request_trial",
+        data : {"name":fname+' '+lname ,"country":country,'org_logo':logo, "email":email , "phone":mobno , "org_name":orgnm ,"timestamp":new Date().getTime()},
+        success : function(response){
+          console.log(response);
+        }
+      });
+    }
   });
   function autocomplete(key){
      var fdata;
