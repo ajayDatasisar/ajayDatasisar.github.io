@@ -121,32 +121,62 @@
   $('#org-name').keyup(function(){
     
     var items = autocomplete( $(this).val() );
-    // console.log(items);
     
   });
 
 
-    $('#request-invite').on('click',function(){
-    var fname = $('#fname').val();
-    var lname = $('#lname').val();
-    var email = $('#email').val();
-    var mobno = $('#mobno').val();
-    var orgnm = $('#org-name').val();
-    var country = $('#country').val();
-    var logo = logoUrl;
+  $('#request-invite').on('click',function(){
+  var fname = $('#fname').val();
+  var lname = $('#lname').val();
+  var email = $('#email').val();
+  var mobno = $('#mobno').val();
+  var orgnm = $('#org-name').val();
+  var country = $('#country').val();
+  var logo = logoUrl;
     if( $('#terms_check').is(':checked') ){
       $.ajax({
         type:"POST",
         crossDomain: true,
         contentType: "application/json" ,
         url : "http://trial.vibrantworkapp.com/request_trial",
-        data : {"name":fname+' '+lname ,"country":country,'org_logo':logo, "email":email , "phone":mobno , "org_name":orgnm ,"timestamp":new Date().getTime()},
+        data : {"name":fname+' '+lname ,"country":country,'org_logo':logo, "email":email , "phone":mobno ,
+               "org_name":orgnm ,"timestamp":new Date().getTime()},
         success : function(response){
-          console.log(response);
+          $('.animate-tick').addClass('animate-tick-transition');
+          $('.success-message').css({'display':''});
         }
       });
     }
   });
+
+
+
+    $('#request-contact').on('click',function(){
+    var fname = $('#c_fname').val();
+    var lname = $('#c_lname').val();
+    var email = $('#c_email').val();
+    var mobno = $('#c_mobno').val();
+    var orgnm = $('#c_org-name').val();
+    var country = $('#c_country').val();
+    var plan_name = $('#c_plan_name').val(); 
+    var logo = logoUrl;
+    // if( $('#terms_check').is(':checked') ){
+      $.ajax({
+        type:"POST",
+        crossDomain: true,
+        contentType: "application/json" ,
+        url : "http://trial.vibrantworkapp.com/website_plan_inquiry",
+        data : {"first_name":fname,"last_name":lname,"country":country,'org_logo':logo, "email":email , "phone":mobno ,
+             "org_name":orgnm ,"timestamp":new Date().getTime()},
+        success : function(response){
+          $('.animate-tick').addClass('animate-tick-transition');
+          $('.success-message').css({'display':''});
+        }
+      });
+    // }
+  });
+
+
   function autocomplete(key){
      var fdata;
      $.get( "https://autocomplete.clearbit.com/v1/companies/suggest?query=:"+key+"", function( data ) {
@@ -174,7 +204,6 @@
   $(document).on('click','li.list-group-item2',function(){
     $('#org-name').val( $(this).data('val') )
     if($(this).find('img').attr('src') != 'null'){
-      console.log( 'HEy watchu lookin at ',$(this).find('img').attr('src') );
       $('#org-name').parent().append('<img id="ilogo" src="'+$(this).find('img').attr('src')+'"/>');
     }
     logoUrl = $(this).find('img').attr('src')
@@ -203,6 +232,12 @@
         );
       });
   }
+
+
+  $(document).on('click','.c_us',function(){
+    var plan = $(this).data('plan');
+    $('#c_plan_name').val(plan);
+  });
 
 
   $(document).on('click','.feature-block',function(){

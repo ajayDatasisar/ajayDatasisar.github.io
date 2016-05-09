@@ -63,6 +63,7 @@ body {
 }
 .carousel-indicators{
   bottom : -30px;
+  left : 67% !important;
 }
 .carousel-indicators li{
   border : 1px solid darkgrey !important;
@@ -188,6 +189,7 @@ body {
     }
     .hero-shot-img{
       width : 65%;
+      float : right;
     }
     .jumbo-subtext, .jumbo-points{
       color :#8b7a84;
@@ -946,7 +948,6 @@ body {
   height:82px;
   width:82px;
   z-index: 1000;
-  border:2px solid coral; 
 }
 .promotion i{
   color:white;
@@ -955,6 +956,7 @@ body {
   position: relative;
   vertical-align: middle;
   top : 7px;
+  font-size: 13px;
 }
 #ilogo{
   position: absolute;
