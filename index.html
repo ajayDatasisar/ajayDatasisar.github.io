@@ -11,6 +11,7 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel='stylesheet' href='css/bootstrap.min.css' />
+    <link rel="icon" type="image/png" href="images/favicon-16x16.png">
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -53,8 +54,8 @@
             <li>
               <center>
                 <i class="row"><img class="nav-logo" src="images/appicon.png"></i>
-                <a href="#/"><img class="deeplink-nav" src="images/android_playstore.png"></a>
-                <a href="#/"><img class="deeplink-nav" src="images/ios_appstore.png"></a>
+                <!-- <a href="#/"><img class="deeplink-nav" src="images/android_playstore.png"></a>
+                <a href="#/"><img class="deeplink-nav" src="images/ios_appstore.png"></a> -->
                 <div style="margin-top:15px" class="social-widgets">
                   <i class="s-media fa fa-medium"></i>
                   <i class="s-media fa fa-linkedin"></i>
@@ -215,7 +216,7 @@
               <tr><td><input id="mobno" placeholder="your mobile number" class="form-control-c"/></td></tr>
               <tr><td style="margin-bottom:0px" class="jumbo-subtext form-entry">Business or Organization name</td></tr>
               
-              <tr><td style="position:relative" id="auto-complete-options"><input id="org-name" placeholder="Business or Organization name" class="jumbo-subtext form-control-c" ></input>
+              <tr><td style="position:relative" class="auto-complete-options"><input placeholder="Business or Organization name" class="jumbo-subtext form-control-c org-name" ></input>
 
               </td></tr>
 
@@ -238,7 +239,7 @@
       </div>
       <div style="padding-top:0px !important" class="modal-footer">
         <span class="glyphicon glyphicon-ok animate-tick"></span><p class="success-message">You are signed up</p>
-        <span style="display:none;top:-25px;" id="request-invite" submit class="nav-menu-model pull-left">Send</span>
+        <span style="display:none;top:-25px;" id="request-invite" class="request-invite nav-menu-model pull-left">Send</span>
       </div>
     </div>
   </div>
